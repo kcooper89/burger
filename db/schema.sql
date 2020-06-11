@@ -5,8 +5,6 @@ USE burgers_db;
 
 CREATE TABLE burgers (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  burger_name VARCHAR(20) NULL,
-  devoured VARCHAR (10 NOT NULL)
+  burgerName VARCHAR(20) NOT NULL,
+  devoured BOOLEAN DEFAULT FALSE
 );
-
-SELECT * FROM burgers_db;
