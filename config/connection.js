@@ -10,7 +10,7 @@ var connection;
     password: "password",
     database: "cat_db"
   });
-}
+
 // Make connection.
 connection.connect(function(err) {
   if (err) {
