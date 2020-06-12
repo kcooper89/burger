@@ -3,13 +3,17 @@ var mysql = require("mysql");
 
 var connection;
 
-connection = mysql.createConnection({
-  host: "localhost",
-  port: 3306,
-  user: "root",
-  password: "password",
-  database: "burgers_db"
-});
+if (!process.env.CLEARDB_DATABASE_URL) {
+  connection = mysql.createConnection({
+    host: "localhost",
+    port: 3306,
+    user: "root",
+    password: "password",
+    database: "burgers_db"
+  });
+} else {
+  connection = mysql.createConnection(process.env.CLEARDB_DATABASE_URL);
+}
 
 // Make connection.
 connection.connect(function(err) {
