@@ -1,11 +1,13 @@
 $(document).ready(function() {
-    
+
     $.ajax("/burgers", {
       type: "GET"
     }).then(function(data) {
   
       var burgers = data.burgers;
       var len = burgers.length;
+  
+      console.log(burgers);
   
       for (var i = 0; i < len; i++) {
   
@@ -19,7 +21,7 @@ $(document).ready(function() {
           klass="btn-danger delete"
         }
   
-        var new_elem = "<div class='row burger-row'><div class='col-md-9 text-center'>"+burgers[i].id+". "+burgers[i].burger_name+"</div><div class='col-md-3 text-center'><button type='button' class='btn "+klass+"' data-id='"+burgers[i].id+"'>"+text+"</button></div></div>"
+        var new_elem = "<div class='row burger-row'><div class='col-md-9 text-center'>"+burgers[i].id+". "+burgers[i].burgerName+"</div><div class='col-md-3 text-center'><button type='button' class='btn "+klass+"' data-id='"+burgers[i].id+"'>"+text+"</button></div></div>"
   
         elem.append(new_elem)
   
@@ -63,7 +65,7 @@ $(document).ready(function() {
       event.preventDefault();
   
       var newBurger = {
-        burger_name: $("#burger_name").val().trim()
+        burgerName: $("#burger_name").val().trim()
       };
   
       // Send the POST request.
