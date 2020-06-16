@@ -1,4 +1,4 @@
-![burger-logo] (/public/assets/images/burger_logo.png)
+[burger-logo] (/public/assets/images/burger_logo.png)
 
 # Burger Homework
 Eat Da Burger is an application that allows you to input the name of your favorite hamburgers that you would like to eat!
