@@ -24,7 +24,7 @@ npm install express
 npm install mysql
 ``` 
 ### Contributions:
-Pull requests are stars are always welcome. For bugs please create an issue [create an issue] (https://github.com/kcooper89/burger/issues/new)
+Pull requests are stars are always welcome. For bugs please create an issue [create an issue](https://github.com/kcooper89/burger/issues/new)
 
 ### Author
 Kyle Cooper 
